@@ -10,6 +10,7 @@ namespace WebMvc.Interfaces
     {
         public string Fala(){
             // implementação
+            return string.Empty;
         }
         public void Escuta(){
             //implementa
@@ -18,9 +19,9 @@ namespace WebMvc.Interfaces
 
     public class MudoPessoa : IPessoa
     {
-        private string Fala()
+        public string Fala()
         {
-            throw new NotImplementedException();
+            return string.Empty;
         }
 
         public void Escuta(){

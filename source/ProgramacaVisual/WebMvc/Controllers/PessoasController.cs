@@ -25,9 +25,12 @@ namespace WebMvc.Controllers
         {
             // busca dos dados
             // transforma dados em dados de visualização
+            var viewModel = new PessoaViewModel
+            {
+                Items = pessoaList
+            };
             // visualização dos dados
-
-
+            return View(viewModel);
         }
     }
 }
