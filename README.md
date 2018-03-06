@@ -34,3 +34,25 @@ git add *
 git commit -m "Initial commit"
 git push origin master
 ```
+
+##Máquinas da Opet
+
+Abra o Visual Studio Code
+Clique em Open Folder
+Crie uma pasta chamda github
+Abra a pasta
+Clique no botão Selecionar Pasta
+
+Clique na área dos arquivos/pastas com o botão direito
+Selecione Open in Terminal
+Customize para utilizar o WSL (linha de comando do Ubuntu)
+(Caso dê algum erro feche o VSCode)
+
+na linha de comando digite o comando
+
+```
+echo copie a url do seu github
+git clone https://github.com/<username>/<repositório>
+```
+
+Estamos prontos para trabalhar
