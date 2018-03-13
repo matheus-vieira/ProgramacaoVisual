@@ -32,5 +32,25 @@ namespace WebMvc.Controllers
             // visualização dos dados
             return View(viewModel);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(
+            [Bind("Nome")]Pessoa newPessoa
+        )
+        {
+            if (!ModelState.IsValid)
+                return View(newPessoa);
+            
+            newPessoa.Id = pessoaList.Max(p => p.Id) + 1;
+            pessoaList.Add(newPessoa);
+
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
